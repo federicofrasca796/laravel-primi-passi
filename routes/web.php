@@ -14,13 +14,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $links = [
-        'Home', 'About', 'Buy my services'
+    $first_variable = [
+        'Laravel', 'IS', 'MAGIC'
     ];
-    return view('home', compact('links'));
+    return view('home', compact('first_variable'));
 })->name('home');
 
-Route::get('/second_site', function () {
+Route::get('/about', function () {
 
-    return view('welcome');
-})->name('second_site');
+    return view('about');
+})->name('about');
+
+Route::get('/buy', function () {
+
+    return view('buy');
+})->name('buy');
