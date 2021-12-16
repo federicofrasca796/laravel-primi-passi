@@ -68,12 +68,18 @@
 
 <body>
     <div class="flex-center position-ref full-height">
+        <div class="content">
+            <div class="title m-b-md">
+                Hello World
+            </div>
 
-        <div class="title m-b-md">
-            Hello World
+            <div class="links"></div>
+            @foreach ($links as $link)
+            <a href="#">{{ $link }}</a>
+            @endforeach
         </div>
-
-        <!-- @if (Route::has('login'))
+    </div>
+    <!-- @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
                         <a href="{{ url('/home') }}">Home</a>

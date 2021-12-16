@@ -14,8 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-
-    return view('home');
+    $links = [
+        'Home', 'About', 'Buy my services'
+    ];
+    return view('home', compact('links'));
 })->name('home');
 
 Route::get('/second_site', function () {
